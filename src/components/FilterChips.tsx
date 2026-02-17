@@ -7,7 +7,7 @@ const FilterChips = ({ onSelect }: { onSelect?: (filter: string) => void }) => {
   const [active, setActive] = useState("All");
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+    <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 scrollbar-hide">
       {semesters.map((sem) => (
         <motion.button
           key={sem}
@@ -16,7 +16,7 @@ const FilterChips = ({ onSelect }: { onSelect?: (filter: string) => void }) => {
             setActive(sem);
             onSelect?.(sem);
           }}
-          className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+          className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
             active === sem
               ? "gradient-btn"
               : "glass-card text-muted-foreground hover:text-foreground hover:bg-muted/80"

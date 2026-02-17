@@ -13,20 +13,20 @@ const sections = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-14 sm:pt-16 lg:pt-20 pb-8 sm:pb-12">
       {/* Hero */}
       <section className="relative overflow-hidden mb-12">
         <div className="absolute inset-0">
           <img src={heroImage} alt="" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 py-16">
+        <div className="relative max-w-7xl mx-auto px-3 sm:px-6 py-8 sm:py-12 lg:py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-muted-foreground mb-2">Welcome back,</p>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold mb-3 text-foreground">
+            <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 text-foreground">
               Hey, <span className="gradient-text">Student</span> 👋
             </h1>
-            <p className="text-muted-foreground text-lg max-w-md mb-8">
+            <p className="text-muted-foreground text-sm sm:text-base lg:text-lg max-w-md mb-8">
               Discover affordable textbooks from your peers. Reuse. Resell. Relearn.
             </p>
             <div className="flex items-center gap-3">
@@ -40,13 +40,13 @@ const Index = () => {
       </section>
 
       {/* Filters */}
-      <div className="max-w-7xl mx-auto px-6 mb-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 mb-6 sm:mb-8">
         <FilterChips />
       </div>
 
       {/* Sections */}
       {sections.map((section, sIdx) => (
-        <section key={section.title} className="max-w-7xl mx-auto px-6 mb-12">
+        <section key={section.title} className="max-w-7xl mx-auto px-3 sm:px-6 mb-8 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
